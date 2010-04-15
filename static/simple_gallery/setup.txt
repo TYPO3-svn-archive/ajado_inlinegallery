@@ -1,0 +1,44 @@
+plugin.tx_ajadoinlinegallery_pi1 {
+  preview = IMAGE
+  preview {
+    params=vspace="2" hspace="5" border="0"
+    file = GIFBUILDER
+    file {
+      XY = [1.w],[1.h]
+      backColor = #ffffff
+      
+      #format=png
+      #quality=100
+      
+      1 = IMAGE
+      1 {
+        file=typo3/sysext/cms/tslib/media/emoticons/smile.gif
+        offset=0,0
+      }
+
+      2 = SCALE
+      2 {
+        height = 210
+        width = 190
+      }
+      
+      3 = ADJUST
+      3 {
+        value = inputLevels = 0,250
+      }
+    }
+  }
+  original {
+    params=vspace="2" hspace="5" border="0"
+    file = GIFBUILDER
+    file {
+      XY = [1.w],[1.h]
+      backColor = #cbccce
+      1 = IMAGE
+      1 {
+        file=typo3/sysext/cms/tslib/media/emoticons/smile.gif
+        offset=0,0
+      }
+    }
+  }
+}
